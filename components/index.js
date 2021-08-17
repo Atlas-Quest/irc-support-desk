@@ -1,1 +1,0 @@
-var alerter = require("./alerter");
