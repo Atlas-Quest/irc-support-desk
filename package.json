@@ -1,0 +1,23 @@
+{
+  "name": "irc-support-desk",
+  "version": "1.0.0",
+  "description": "Realtime Support Frontend. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atlas-Quest/irc-support-desk.git"
+  },
+  "author": "Vanessa Dohnt <hello@nesscodes.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Atlas-Quest/irc-support-desk/issues"
+  },
+  "homepage": "https://github.com/Atlas-Quest/irc-support-desk#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack-cli": "^4.8.0"
+  }
+}
