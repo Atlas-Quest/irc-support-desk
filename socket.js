@@ -2,10 +2,6 @@ import { EventEmitter } from "events";
 
 class Socket {
   constructor(ws = new WebSocket(), ee = new EventEmitter()) {
-    console.log(
-      "🚀 ~ file: socket.js ~ line 5 ~ Socket ~ constructor ~ ws",
-      ws
-    );
     this.ws = ws;
     this.ee = ee;
     ws.onmessage = this.message.bind(this);
