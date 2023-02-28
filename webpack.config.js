@@ -1,20 +1,40 @@
+const path = require("path");
+
 module.exports = {
-  entry: "./bundle.js",
+  entry: "./index.js",
   mode: "development",
   devtool: "inline-source-map",
   output: {
-    path: __dirname,
     filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "/dist/",
   },
   devServer: {
-    historyApiFallback: true,
+    static: {
+      directory: path.join(__dirname, "/"),
+    },
   },
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
-        loader: "babel-loader",
+        test: /\.(jsx|js)$/,
         exclude: /node_modules/,
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: [
+                [
+                  "@babel/preset-env",
+                  {
+                    targets: "defaults",
+                  },
+                ],
+                "@babel/preset-react",
+              ],
+            },
+          },
+        ],
       },
     ],
   },
