@@ -6,7 +6,7 @@ class Message extends Component {
   render() {
     // TODO: change date format package
     let {message} = this.props;
-    let createdAt = fecha.format(message.createdAt, "HH:mm:ss MM/DD/YYYY");
+    let createdAt = fecha.format(new Date(message.createdAt), "hh:mm:ss MM/DD/YYYY");
     return (
       <li className="message">
         <div className="author">
